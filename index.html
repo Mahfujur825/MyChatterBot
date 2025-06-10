@@ -1,0 +1,26 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatBot</title>
+</head>
+<body>
+  <h1>Hello! I’m your chatbot.</h1>
+  <input type="text" id="userInput" placeholder="Say something..." />
+  <button onclick="reply()">Send</button>
+  <p id="botReply"></p>
+
+  <script>
+    function reply() {
+      const input = document.getElementById("userInput").value;
+      let response = "I didn’t understand that.";
+      if (input.toLowerCase().includes("hello")) {
+        response = "Hi there!";
+      } else if (input.toLowerCase().includes("how are you")) {
+        response = "I'm just code, but I'm running great!";
+      }
+      document.getElementById("botReply").innerText = response;
+    }
+  </script>
+</body>
+</html>
