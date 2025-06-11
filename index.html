@@ -14,11 +14,17 @@
     function reply() {
       const input = document.getElementById("userInput").value;
       let response = "I didn’t understand that.";
-      if (input.toLowerCase().includes("hello")) {
+
+      const lowerInput = input.toLowerCase();
+
+      if (lowerInput.includes("hi")) {
+        response = "Hello!";
+      } else if (lowerInput.includes("hello")) {
         response = "Hi there!";
-      } else if (input.toLowerCase().includes("how are you")) {
+      } else if (lowerInput.includes("how are you")) {
         response = "I'm just code, but I'm running great!";
       }
+
       document.getElementById("botReply").innerText = response;
     }
   </script>
